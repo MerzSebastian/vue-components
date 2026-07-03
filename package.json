@@ -10,7 +10,7 @@
   },
   "homepage": "https://merzsebastian.github.io/vue-components",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "main": "./dist/vue-components.umd.cjs",
   "module": "./dist/vue-components.js",
