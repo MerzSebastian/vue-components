@@ -1,0 +1,64 @@
+{
+  "name": "@merzsebastian/vue-components",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A collection of flexible Vue 3 components, starting with a before/after image comparison slider",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MerzSebastian/vue-components.git"
+  },
+  "homepage": "https://merzsebastian.github.io/vue-components",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/vue-components.umd.cjs",
+  "module": "./dist/vue-components.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/vue-components.css",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-components.js",
+      "require": "./dist/vue-components.umd.cjs"
+    },
+    "./style.css": "./dist/vue-components.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build:lib": "vite build --config vite.lib.config.ts && vue-tsc -p tsconfig.lib.json --emitDeclarationOnly",
+    "typecheck": "vue-tsc -b"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/node": "^24.13.2",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vue/tsconfig": "^0.9.1",
+    "tailwindcss": "^4.1.18",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1",
+    "vue": "^3.5.39",
+    "vue-tsc": "^3.3.5",
+    "storybook": "^10.4.6",
+    "@storybook/vue3-vite": "^10.4.6",
+    "@chromatic-com/storybook": "^5.2.1",
+    "@storybook/addon-vitest": "^10.4.6",
+    "@storybook/addon-a11y": "^10.4.6",
+    "@storybook/addon-docs": "^10.4.6",
+    "@storybook/addon-onboarding": "^10.4.6",
+    "vitest": "^4.1.9",
+    "playwright": "^1.61.1",
+    "@vitest/browser-playwright": "^4.1.9",
+    "@vitest/coverage-v8": "^4.1.9"
+  }
+}
